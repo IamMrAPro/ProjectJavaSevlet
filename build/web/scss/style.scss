@@ -677,6 +677,7 @@ img {
                 margin-bottom: 20px;
                 &:hover {
                     color: $hover-color;
+                    background-color: blue;
                 }
                 @media #{$breakpoint-lg} {
                     font-size: 30px;

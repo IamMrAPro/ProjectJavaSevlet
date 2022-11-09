@@ -150,7 +150,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <div class="col-12">
                         <div class="blog-posts-area">
                             <div class="row">
-                                <form method="get" action="update">
+                                <form method="post" action="tranf">
                                     
                                    
                                         <br><!-- comment -->
@@ -178,10 +178,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                                 </div>
                                             </div>
                                             <div  class="post-content">
-
-
+                                                Author:
+                                                <input type="text" name="author" value="${item.getAuthor()}">
                                                 <input type="submit" name="update" class="dropdown-item post-title" value="Update Author" >
-
+                                                <br><!-- comment -->
+                                                <br><!-- comment -->
+                                                <br><!-- comment -->
                                             </div>
                                         </div>
 

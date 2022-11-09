@@ -20,19 +20,24 @@ public class tranferAuthor extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       
+        News nes = new News();
+        String title = req.getParameter("titles");
+        String author = req.getParameter("author");
+        System.out.println(title);
+        nes.tranfAuthor(author,title);
+        title = null;
+        resp.sendRedirect("tranf");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id =null;
+        String id = null;
         News nes = new News();
-        
+
         ArrayList<News> listNews = nes.getAllNew();
-       
+
         req.setAttribute("lists", listNews);
-        
-        
+
         req.getRequestDispatcher("tranferAuthor.jsp").forward(req, resp);
     }
 
